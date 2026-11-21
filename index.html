@@ -1,202 +1,409 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="معرفی Mr Fahimi و آموزش مقدماتی سئو در هشت اسلاید">
-<title>Mr Fahimi | آموزش سئو</title><style>
-:root{--c1:#00f0ff;--c2:#ff2e93;--c3:#b6ff3b;--bg:#07060f;--panel:#0f0d1f;--muted:#a9a6d6}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mr Fahimi | نمونه کارهام  </title>
+<meta name="description"  بتوشه  ">
+/* SEO SLIDER - افزوده شده بدون تغییر استایل‌های قبلی */
+.seo-slider{
+  margin:35px 0;
+  padding:22px;
+  background:linear-gradient(135deg,#0f0d1f,#1a0f2e);
+  border:1px solid #00f0ff66;
+  box-shadow:0 0 22px #00f0ff18;
+  position:relative;
+  overflow:hidden;
+}
+.seo-slider .seo-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:18px;
+  color:var(--c1);
+  font-size:.8rem;
+}
+.seo-slider .seo-count{
+  color:var(--c3);
+  font-family:monospace;
+}
+.seo-slider .seo-slide{
+  display:none;
+  min-height:245px;
+  animation:seoFade .4s ease;
+}
+.seo-slider .seo-slide.active{display:block}
+@keyframes seoFade{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.seo-slider .seo-slide h3{
+  color:var(--c2);
+  font-size:1.15rem;
+  margin-bottom:12px;
+}
+.seo-slider .seo-slide p{
+  color:#e9e7ff;
+  font-size:.92rem;
+  margin-bottom:10px;
+}
+.seo-slider .seo-slide ul{
+  padding-right:22px;
+  color:#a9a6d6;
+  font-size:.86rem;
+}
+.seo-slider .seo-slide li{margin:5px 0}
+.seo-slider .seo-controls{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-top:18px;
+}
+.seo-slider .seo-btn{
+  cursor:pointer;
+  border:1px solid var(--c1);
+  background:transparent;
+  color:var(--c1);
+  padding:7px 17px;
+  font-family:Tahoma,sans-serif;
+  font-weight:bold;
+  transition:.2s;
+}
+.seo-slider .seo-btn:hover{
+  background:var(--c1);
+  color:var(--bg);
+  box-shadow:0 0 14px var(--c1);
+}
+.seo-slider .seo-dots{
+  display:flex;
+  justify-content:center;
+  gap:7px;
+}
+.seo-slider .seo-dot{
+  width:9px;
+  height:9px;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:#66617f;
+  cursor:pointer;
+}
+.seo-slider .seo-dot.active{
+  background:var(--c3);
+  box-shadow:0 0 10px var(--c3);
+}
+.seo-slider .seo-progress{
+  height:3px;
+  background:#ffffff15;
+  margin-top:15px;
+}
+.seo-slider .seo-progress i{
+  display:block;
+  height:100%;
+  width:12.5%;
+  background:var(--c1);
+  transition:width .3s;
+}
+@media(max-width:520px){
+  .seo-slider{padding:16px}
+  .seo-slider .seo-slide{min-height:300px}
+  .seo-slider .seo-controls{flex-wrap:wrap}
+}
+<style>
+:root{--c1:#00f0ff;--c2:#ff2e93;--c3:#b6ff3b;--bg:#07060f;--panel:#0f0d1f}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 body{font-family:Tahoma,"Segoe UI",sans-serif;background:var(--bg);color:#e9e7ff;line-height:1.9;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(600px 400px at 85% 0%,#ff2e9333,transparent),radial-gradient(600px 500px at 10% 100%,#00f0ff2b,transparent),linear-gradient(#00f0ff12 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,#00f0ff12 1px,transparent 1px) 0 0/44px 44px}
-body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;background:repeating-linear-gradient(115deg,transparent 0 38px,#ffffff08 38px 40px);animation:slidebg 6s linear infinite}
-@keyframes slidebg{to{background-position:200px 0}}
-.wrap{max-width:940px;margin:auto;padding:20px 18px 55px}
-header{position:sticky;top:8px;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 16px;background:#0f0d1fee;border:1px solid #00f0ff55;backdrop-filter:blur(12px);box-shadow:0 8px 30px #0008}
-.brand{font:bold 1rem monospace;color:var(--c1);letter-spacing:1px;text-decoration:none}
-nav{display:flex;gap:16px;flex-wrap:wrap}
-nav a{font-size:.82rem;color:#d9d5ff;text-decoration:none}
-nav a:hover{color:var(--c1)}
-.status{font-size:.72rem;color:var(--c3);white-space:nowrap}
-.status:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c3);box-shadow:0 0 9px var(--c3);margin-left:7px}
-.hero{margin:26px 0;padding:28px 24px;border:1px solid #00f0ff55;background:linear-gradient(135deg,#0f0d1fee,#1a0f2eee);clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,24px 100%,0 calc(100% - 24px));position:relative}
-.kicker{color:var(--c2);font:700 .72rem monospace;letter-spacing:2px}
-h1{font-size:clamp(2rem,7vw,3.3rem);line-height:1.35;color:white;text-shadow:2px 0 var(--c2),-2px 0 var(--c1);margin:8px 0}
-.role{color:var(--c1);font-weight:bold}
-.lead{color:var(--muted);max-width:700px;margin-top:8px}
-.btn{display:inline-block;margin-top:17px;padding:9px 20px;background:var(--c1);color:#07060f;text-decoration:none;font-weight:bold;box-shadow:0 0 18px #00f0ff55;transition:.2s}
-.btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
-.btn.alt{background:transparent;border:1px solid var(--c2);color:var(--c2);box-shadow:none;margin-right:8px}
-h2{font-size:1.2rem;color:var(--c1);margin:34px 0 14px}
-h2:before{content:"// ";color:var(--c2);font-family:monospace}
-.slider-shell{background:linear-gradient(135deg,#100e22,#171027);border:1px solid #00f0ff55;padding:18px;box-shadow:0 0 28px #00f0ff12}
-.slide{display:none;min-height:255px;padding:22px;background:#0b0a17;border:1px solid #ffffff18;position:relative}
-.slide.active{display:block;animation:appear .35s ease}
-@keyframes appear{from{opacity:.25;transform:translateX(10px)}to{opacity:1;transform:none}}
-.slide-num{font:700 .72rem monospace;color:var(--c2);letter-spacing:2px}
-.slide h3{font-size:1.25rem;color:#fff;margin:12px 0}
-.slide p{color:var(--muted);max-width:760px}
-.slide .hint{margin-top:14px;padding:10px 12px;border-right:3px solid var(--c3);background:#b6ff3b0c;color:#dce9b5;font-size:.88rem}
-.slider-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
-.arrows{display:flex;gap:8px}
-.arrow{border:1px solid var(--c1);background:transparent;color:var(--c1);padding:7px 15px;cursor:pointer;font:inherit}
-.arrow:hover{background:#00f0ff18}
-.dots{display:flex;gap:7px;justify-content:center;flex-wrap:wrap}
-.dot{width:9px;height:9px;border:0;border-radius:50%;background:#625d7b;cursor:pointer;padding:0}
-.dot.active{background:var(--c1);box-shadow:0 0 10px var(--c1)}
-.small{font-size:.8rem;color:#8985ad}
-.panel{background:var(--panel);border:1px solid #ffffff18;padding:18px;margin:14px 0}
-.panel h3{color:white;margin-bottom:7px}
-.panel p,.panel li{color:var(--muted)}
-.panel ul,.panel ol{padding-right:22px;margin-top:8px}
-.tag{display:inline-block;border:1px solid #b6ff3b66;color:var(--c3);padding:1px 10px;font-size:.75rem;margin:3px}
-.tip{border:1px dashed #b6ff3b88;background:#141326;padding:18px;margin-top:24px;color:var(--muted)}
-footer{text-align:center;color:#6d6a96;font:.75rem monospace;margin-top:42px}
-@media(max-width:600px){header{align-items:flex-start;flex-direction:column}nav{gap:12px}.slider-controls{flex-direction:column}.slide{min-height:300px}}
+/* grid + glow background */
+body::before{content:"";position:fixed;inset:0;z-index:-2;
+background:
+radial-gradient(600px 400px at 85% 0%,#ff2e9333,transparent),
+radial-gradient(600px 500px at 10% 100%,#00f0ff2b,transparent),
+linear-gradient(#00f0ff12 1px,transparent 1px) 0 0/44px 44px,
+linear-gradient(90deg,#00f0ff12 1px,transparent 1px) 0 0/44px 44px}
+/* anime speed lines */
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+background:repeating-linear-gradient(115deg,transparent 0 38px,#ffffff08 38px 40px);
+animation:slide 6s linear infinite}
+@keyframes slide{to{background-position:200px 0}}
+.wrap{max-width:820px;margin:0 auto;padding:24px 18px 60px}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:#8e8bb8;padding:6px 0}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c3);box-shadow:0 0 10px var(--c3);margin-left:6px;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.3}}
+/* hero */
+.hero{margin:26px 0;padding:30px 22px;border:1px solid #00f0ff55;background:linear-gradient(135deg,#0f0d1fee,#1a0f2eee);
+clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,26px 100%,0 calc(100% - 26px));position:relative}
+.hero::before{content:"PLAYER 01";position:absolute;top:10px;left:34px;font:700 .7rem monospace;color:var(--c1);letter-spacing:3px}
+.lvl{display:inline-block;background:var(--c2);color:#fff;font:700 .8rem monospace;padding:2px 12px;transform:skewX(-14deg);margin-top:18px}
+.glitch{font-size:clamp(2rem,9vw,3.4rem);font-weight:900;line-height:1.3;position:relative;color:#fff;text-shadow:2px 0 var(--c2),-2px 0 var(--c1);animation:gl 4s infinite}
+@keyframes gl{0%,92%,100%{transform:none}94%{transform:translate(3px,-1px) skewX(6deg)}96%{transform:translate(-3px,1px)}}
+.role{color:var(--c1);margin-top:4px;font-weight:700}
+.sub{color:#a9a6d6;margin-top:10px;max-width:520px}
+.xp{margin-top:18px;height:10px;background:#ffffff14;border-radius:99px;overflow:hidden}
+.xp i{display:block;height:100%;width:72%;background:linear-gradient(90deg,var(--c1),var(--c2));box-shadow:0 0 14px var(--c1);animation:fill 2s ease-out}
+@keyframes fill{from{width:0}}
+.xpt{display:flex;justify-content:space-between;font:.7rem monospace;color:#8e8bb8;margin-top:4px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{padding:10px 26px;text-decoration:none;font-weight:700;font-size:.95rem;color:#07060f;background:var(--c1);transform:skewX(-12deg);box-shadow:0 0 18px #00f0ff77;transition:.2s}
+.btn.o{background:transparent;color:var(--c2);border:1px solid var(--c2);box-shadow:0 0 14px #ff2e9355}
+.btn:hover{transform:skewX(-12deg) translateY(-3px);filter:brightness(1.2)}
+/* sections */
+h2{margin:40px 0 14px;font-size:1.1rem;color:var(--c1);letter-spacing:1px}
+h2::before{content:"// ";color:var(--c2);font-family:monospace}
+.stats{display:grid;gap:12px}
+.stat{background:var(--panel);border:1px solid #ffffff14;padding:12px 16px}
+.stat div{display:flex;justify-content:space-between;font-size:.9rem}
+.bar{height:6px;background:#ffffff12;margin-top:6px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--c3),var(--c1));box-shadow:0 0 10px var(--c3)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.q{background:var(--panel);border:1px solid #ffffff14;padding:18px;position:relative;transition:.25s;overflow:hidden}
+.q::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,#00f0ff22,transparent 60%);transform:translateX(-100%);transition:.6s}
+.q:hover{border-color:var(--c1);transform:translateY(-5px);box-shadow:0 10px 30px #00f0ff22}
+.q:hover::after{transform:translateX(100%)}
+.q b{color:#fff}
+.q small{display:block;color:var(--c2);font:700 .7rem monospace;margin-bottom:4px}
+.q p{color:#a9a6d6;font-size:.9rem}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badges span{border:1px solid #b6ff3b66;color:var(--c3);padding:3px 14px;font-size:.85rem;transform:skewX(-10deg)}
+.contact{margin-top:10px;padding:26px 20px;border:1px solid #ff2e9366;background:linear-gradient(135deg,#1a0f2eee,#0f0d1fee);clip-path:polygon(26px 0,100% 0,100% calc(100% - 26px),calc(100% - 26px) 100%,0 100%,0 26px);text-align:center}
+.contact p{color:#a9a6d6;margin-bottom:18px}
+.links{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.lk{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 10px;text-decoration:none;color:#fff;font-weight:700;background:var(--panel);border:1px solid var(--col);box-shadow:0 0 14px color-mix(in srgb,var(--col) 35%,transparent);transform:skewX(-8deg);transition:.25s}
+.lk span{font:700 .75rem monospace;color:#07060f;background:var(--col);padding:1px 8px;display:inline-block}
+.lk:hover{transform:skewX(-8deg) translateY(-4px);background:color-mix(in srgb,var(--col) 18%,var(--panel));box-shadow:0 0 26px var(--col)}
+.lk.mail{grid-column:span 2;--col:var(--c3)}
+.note{display:flex;gap:18px;align-items:center;padding:22px;border:1px dashed #b6ff3b88;background:linear-gradient(135deg,#0f0d1fee,#14102aee);clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
+.emblem{flex:none;width:96px;height:96px;display:grid;place-items:center;font-size:3rem;color:var(--c3);border:2px solid var(--c3);border-radius:50%;text-shadow:0 0 16px var(--c3);box-shadow:0 0 22px #b6ff3b55,inset 0 0 18px #b6ff3b33;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.note img{flex:none;width:110px;height:110px;object-fit:cover;border-radius:16px;border:2px solid var(--c3)}
+.txt b{color:#fff;font-size:1.05rem}
+.txt p{color:#a9a6d6;margin-top:4px}
+@media(max-width:520px){.note{flex-direction:column;text-align:center}}
+footer{text-align:center;color:#6d6a96;font:.75rem monospace;margin-top:50px}
 </style>
 </head>
-<body><div class="wrap">
-<header>
-<a class="brand" href="index.html">MR FAHIMI</a>
-<nav><a href="index.html">خانه</a><a href="#seo-slider">آموزش سئو</a><a href="seo.html">ادامه آموزش</a><a href="#contact">ارتباط</a></nav>
-<span class="status">آنلاین</span>
-</header>
-<section class="hero">
-<div class="kicker">PLAYER 01 / WELCOME</div>
-<h1>MR FAHIMI</h1>
-<p class="role">گیمر • توسعه‌دهنده • علاقه‌مند به دنیای تکنولوژی</p>
-<p class="lead">به فضای شخصی من خوش آمدید. اینجا بخشی از علاقه‌مندی‌هایم را می‌بینید و در کنار آن، با مفاهیم مقدماتی سئو و سؤال‌های رایج مصاحبه آشنا می‌شوید.</p>
-<a class="btn" href="#seo-slider">شروع آموزش سئو</a>
-<a class="btn alt" href="seo.html">رفتن به صفحه آموزش</a>
-</section>
-<h2 id="seo-slider">آموزش مقدماتی سئو | ۸ اسلاید</h2>
-<p class="lead" style="margin-bottom:14px">این هشت اسلاید بر اساس فایل PDF ارسالی شما، با موضوع «۸ سؤال رایج مصاحبه استخدامی سئو» تنظیم شده‌اند. برای جزئیات هر درس، روی ادامه آموزش بزنید.</p>
-<div class="slider-shell">
-<div id="slides">
-<article class="slide active">
-<div class="slide-num">SEO QUEST / 01 OF 08</div><h3>سئو چیست و چه انواعی دارد؟</h3><p>سئو یعنی بهینه‌سازی سایت برای بهتر دیده‌شدن در نتایج ارگانیک موتورهای جست‌وجو و جذب ترافیک هدفمند.</p>
-<div class="hint">سه بخش اصلی: سئوی داخلی (On-page)، سئوی فنی (Technical) و سئوی خارجی (Off-page).</div><a class="btn" href="seo.html#lesson-1">مطالعه کامل این درس ←</a>
-</article>
-<article class="slide ">
-<div class="slide-num">SEO QUEST / 02 OF 08</div><h3>تحقیق کلمه کلیدی را چطور انجام می‌دهید؟</h3><p>از موضوع کسب‌وکار و مخاطب شروع کنید؛ سپس حجم جست‌وجو، رقابت و هدف کاربر را بررسی کنید.</p>
-<div class="hint">Google Suggest، جست‌وجوهای مرتبط، Keyword Planner و Ahrefs می‌توانند در این فرایند کمک کنند.</div><a class="btn" href="seo.html#lesson-2">مطالعه کامل این درس ←</a>
-</article>
-<article class="slide ">
-<div class="slide-num">SEO QUEST / 03 OF 08</div><h3>صفحه جدید ایندکس نمی‌شود؛ چه می‌کنید؟</h3><p>ابتدا وضعیت URL را در Search Console بررسی کنید و مطمئن شوید مانعی برای ایندکس‌شدن وجود ندارد.</p>
-<div class="hint">مواردی مانند noindex، فایل robots.txt، نقشه سایت، لینک داخلی و کیفیت محتوا را بررسی کنید.</div><a class="btn" href="seo.html#lesson-3">مطالعه کامل این درس ←</a>
-</article>
-<article class="slide ">
-<div class="slide-num">SEO QUEST / 04 OF 08</div><h3>ترافیک سایت افت کرده است؛ چطور بررسی می‌کنید؟</h3><p>زمان و صفحات درگیر را پیدا کنید؛ سپس تغییرات سایت، وضعیت فنی، محتوا و رقبا را بررسی کنید.</p>
-<div class="hint">داده‌های Search Console و Analytics نقطه شروع مناسبی برای عیب‌یابی هستند.</div><a class="btn" href="seo.html#lesson-4">مطالعه کامل این درس ←</a>
-</article>
-<article class="slide ">
-<div class="slide-num">SEO QUEST / 05 OF 08</div><h3>بک‌لینک چیست و چرا مهم است؟</h3><p>بک‌لینک لینکی است که از یک سایت دیگر به سایت شما داده می‌شود؛ ارتباط و اعتبار سایت لینک‌دهنده اهمیت دارد.</p>
-<div class="hint">روی محتوای ارزشمند و لینک‌های طبیعی تمرکز کنید؛ لینک‌های انبوه و بی‌کیفیت می‌توانند آسیب‌زا باشند.</div><a class="btn" href="seo.html#lesson-5">مطالعه کامل این درس ←</a>
-</article>
-<article class="slide ">
-<div class="slide-num">SEO QUEST / 06 OF 08</div><h3>اگر سایتی کند باشد چه می‌کنید؟</h3><p>ابتدا سرعت را اندازه‌گیری و علت کندی را پیدا کنید؛ بعد بهینه‌سازی را بر اساس اولویت انجام دهید.</p>
-<div class="hint">فشرده‌سازی تصاویر، کش، حذف افزونه‌های اضافی و در صورت نیاز هاست بهتر یا CDN را بررسی کنید.</div><a class="btn" href="seo.html#lesson-6">مطالعه کامل این درس ←</a>
-</article>
-<article class="slide ">
-<div class="slide-num">SEO QUEST / 07 OF 08</div><h3>ریسپانسیو بودن سایت چه ارتباطی با سئو دارد؟</h3><p>سایت ریسپانسیو با اندازه‌های مختلف صفحه نمایش سازگار می‌شود و تجربه کاربری بهتری فراهم می‌کند.</p>
-<div class="hint">طراحی موبایل‌پسند، Media Query، Flexbox و Grid از موضوعات مهم این بخش هستند.</div><a class="btn" href="seo.html#lesson-7">مطالعه کامل این درس ←</a>
-</article>
-<article class="slide ">
-<div class="slide-num">SEO QUEST / 08 OF 08</div><h3>با چه ابزارهایی کار کرده‌اید یا آشنایی دارید؟</h3><p>ابزارها به بررسی عملکرد، کلمات کلیدی، بک‌لینک‌ها، خطاهای فنی و سرعت سایت کمک می‌کنند.</p>
-<div class="hint">Search Console، Analytics، Ahrefs، Semrush، Screaming Frog و PageSpeed Insights را بشناسید.</div><a class="btn" href="seo.html#lesson-8">مطالعه کامل این درس ←</a>
-</article>
-</div>
-<div class="slider-controls">
-<div class="arrows"><button class="arrow" id="prev" aria-label="اسلاید قبلی">→ قبلی</button><button class="arrow" id="next" aria-label="اسلاید بعدی">بعدی ←</button></div>
-<div class="dots" id="dots" aria-label="انتخاب اسلاید"></div>
-<span class="small" id="counter">01 / 08</span>
-</div></div>
-<section class="panel" style="margin-top:24px">
-<h3>ادامه مسیر یادگیری</h3><p>در صفحه دوم، نکات و مراحل هر هشت موضوع را کامل‌تر می‌خوانید؛ از انواع سئو و تحقیق کلمه کلیدی تا بررسی ایندکس، افت ترافیک، بک‌لینک، سرعت، ریسپانسیو بودن و ابزارهای سئو.</p>
-<a class="btn" href="seo.html">ورود به صفحه دوم و ادامه آموزش</a>
-</section>
-<section id="contact"><h2>ارتباط با من</h2><div class="panel"><p>برای ارتباط و دنبال‌کردن فعالیت‌هایم:</p><p><a href="https://t.me/iDFaH" style="color:var(--c1)">تلگرام</a>　|　<a href="https://eitaa.com/iDFahimi" style="color:var(--c2)">ایتا</a>　|　<a href="mailto:fahimi.nml@gmail.com" style="color:var(--c3)">ایمیل</a></p></div></section>
-<footer>© MR FAHIMI — آموزش و یادگیری، مرحله به مرحله</footer>
+<body>
+<div class="wrap">
+  <div class="top"><span><i class="dot"></i>آنلاین</span><span>Fahimi</span></div>
+
+  <div class="hero">
+    <div class="lvl">درحال LVL UP</div>
+    <h1 class="glitch"> Mr Fahimi </h1>
+    <p class="role">گیمر • توسعه‌دهنده • علاقه‌مند به دنیای جدید </p>
+    <p class="sub">  درباره‌ خودم :  دنبال  ماجراجویی بعدی هستم.</p>
+    <div class="xp"><i></i></div>
+    <div class="xpt"><span>XP</span><span>7200 / 10000</span></div>
+    <div class="btns">
+      <a class="btn" href="#contact">شروع همکاری</a>
+    </div>
+  </div>
+
+  <h2>آمار بازیکن</h2>
+  <!-- SEO SLIDER -->
+  <h2>آموزش سئو | ۸ سؤال مهم مصاحبه</h2>
+
+  <section class="seo-slider" id="seoSlider">
+    <div class="seo-top">
+      <span>SEO TRAINING / QUEST</span>
+      <span class="seo-count" id="seoCount">01 / 08</span>
+    </div>
+
+    <div class="seo-slide active">
+      <h3>۱. سئو چیست و چه انواعی دارد؟</h3>
+      <p>سئو یعنی بهینه‌سازی سایت برای موتورهای جستجو تا در نتایج طبیعی رتبه بهتری بگیرد و بازدیدکننده هدفمند جذب کند.</p>
+      <ul>
+        <li>سئوی داخلی: عنوان، توضیحات، تیترها و محتوا</li>
+        <li>سئوی فنی: سرعت، نسخه موبایل و ایندکس</li>
+        <li>سئوی خارجی: بک‌لینک و اعتبار سایت</li>
+      </ul>
+    </div>
+
+    <div class="seo-slide">
+      <h3>۲. تحقیق کلمه کلیدی چگونه انجام می‌شود؟</h3>
+      <p>ابتدا موضوع کسب‌وکار و مخاطب را مشخص می‌کنم؛ سپس حجم جستجو، رقابت و هدف کاربر را بررسی می‌کنم.</p>
+      <ul>
+        <li>استفاده از Google Suggest و جستجوهای مرتبط</li>
+        <li>بررسی با Keyword Planner یا Ahrefs</li>
+        <li>تشخیص هدف جستجو: اطلاعاتی، خرید یا مقایسه</li>
+        <li>انتخاب کلمات مرتبط و Long-tail</li>
+      </ul>
+    </div>
+
+    <div class="seo-slide">
+      <h3>۳. چرا یک صفحه ایندکس نمی‌شود؟</h3>
+      <p>ابتدا وضعیت صفحه را در Google Search Console بررسی می‌کنم و بعد موانع ایندکس را پیدا می‌کنم.</p>
+      <ul>
+        <li>بررسی URL Inspection</li>
+        <li>بررسی noindex و فایل robots.txt</li>
+        <li>بررسی نقشه سایت و لینک‌های داخلی</li>
+        <li>بررسی کیفیت و یکتایی محتوا</li>
+        <li>درخواست Request Indexing و صبر برای بررسی مجدد</li>
+      </ul>
+    </div>
+
+    <div class="seo-slide">
+      <h3>۴. اگر ترافیک سایت افت کند چه می‌کنید؟</h3>
+      <p>ابتدا زمان و صفحات درگیر را پیدا می‌کنم؛ سپس علت فنی یا محتوایی افت را بررسی می‌کنم.</p>
+      <ul>
+        <li>بررسی Search Console و Analytics</li>
+        <li>بررسی تغییرات سایت و آپدیت الگوریتم گوگل</li>
+        <li>بررسی ایندکس، سرعت و لینک‌های شکسته</li>
+        <li>مقایسه محتوا و رتبه رقبا</li>
+        <li>رفع مشکلات و ارزیابی دوباره نتیجه</li>
+      </ul>
+    </div>
+
+    <div class="seo-slide">
+      <h3>۵. بک‌لینک چیست؟</h3>
+      <p>بک‌لینک لینکی است که از یک سایت دیگر به سایت ما داده می‌شود. اعتبار و ارتباط سایت لینک‌دهنده از تعداد لینک‌ها مهم‌تر است.</p>
+      <ul>
+        <li>دریافت لینک از سایت معتبر و مرتبط</li>
+        <li>تولید محتوای ارزشمند</li>
+        <li>مهمان‌نویسی و معرفی در رسانه‌های مرتبط</li>
+        <li>پرهیز از لینک‌های انبوه و بی‌کیفیت</li>
+      </ul>
+    </div>
+
+    <div class="seo-slide">
+      <h3>۶. اگر سایت کند باشد چه می‌کنید؟</h3>
+      <p>ابتدا با PageSpeed Insights مشکل سرعت را بررسی می‌کنم و بعد موارد قابل بهبود را اصلاح می‌کنم.</p>
+      <ul>
+        <li>فشرده‌سازی تصاویر و استفاده از WebP</li>
+        <li>استفاده از Smush یا ShortPixel</li>
+        <li>فعال‌سازی کش با LiteSpeed Cache یا WP Rocket</li>
+        <li>حذف افزونه‌ها و قالب‌های اضافی</li>
+        <li>بررسی هاست و CDN</li>
+      </ul>
+    </div>
+
+    <div class="seo-slide">
+      <h3>۷. ریسپانسیو بودن چه تأثیری بر سئو دارد؟</h3>
+      <p>ریسپانسیو یعنی سایت با اندازه صفحه نمایش موبایل و کامپیوتر هماهنگ شود. گوگل هم از Mobile-First Indexing استفاده می‌کند.</p>
+      <ul>
+        <li>طراحی با CSS، Media Query، Flexbox و Grid</li>
+        <li>بهبود تجربه کاربری در موبایل</li>
+        <li>بررسی مشکلات موبایل در Search Console</li>
+      </ul>
+    </div>
+
+    <div class="seo-slide">
+      <h3>۸. ابزارهای مهم سئو کدام‌اند؟</h3>
+      <p>هر ابزار برای بررسی بخشی از وضعیت سایت استفاده می‌شود:</p>
+      <ul>
+        <li>Google Search Console: کلیک، رتبه و ایندکس</li>
+        <li>Google Analytics: بازدیدکننده و رفتار کاربران</li>
+        <li>Ahrefs و Semrush: کلمه کلیدی و بک‌لینک</li>
+        <li>Screaming Frog: خطاهای فنی و لینک شکسته</li>
+        <li>PageSpeed Insights: سرعت سایت</li>
+      </ul>
+    </div>
+
+    <div class="seo-progress"><i id="seoProgress"></i></div>
+
+    <div class="seo-controls">
+      <button class="seo-btn" type="button" id="seoPrev">قبلی</button>
+      <div class="seo-dots" id="seoDots"></div>
+      <button class="seo-btn" type="button" id="seoNext">بعدی</button>
+    </div>
+  </section>
+  <div class="stats">
+    <div class="stat"><div><span>موبایل و کامپیوتر  </span><span>90%</span></div><div class="bar"><i style="width:90%"></i></div></div>
+    <div class="stat"><div><span>طراحی سایت </span><span>75%</span></div><div class="bar"><i style="width:75%"></i></div></div>
+    <div class="stat"><div><span> کار با Ai</span><span>60%</span></div><div class="bar"><i style="width:60%"></i></div></div>
+  </div>
+
+  <h2>ماموریت‌ها</h2>
+  <div class="cards">
+    <div class="q"><small>QUEST 01</small><b>پروژه‌ی اول</b><p> هنو نگرفتم بگیرم میزارم اینجا صدردصد .</p></div>
+    <div class="q"><small>QUEST 02</small><b>پروژه‌ی دوم</b><p>میگم هنو نگرفتم بگیرم میزارم  .</p></div>
+    <div class="q"><small>QUEST 03</small><b>پروژه‌ی سوم</b><p>داش دنبال چیی میگم نگرفتم  .</p></div>
+  </div>
+
+  <h2>علاقه‌مندی‌ها</h2>
+  <div class="badges"><span>کامپیوتر</span><span>موبایل</span><span>طراحی سایت</span><span>کار با Ai</span><span>همه چی</span></div>
+
+  <h2 id="contact">ارتباط با من</h2>
+  <div class="contact">
+    <p>آماده‌ی ماموریت بعدی هستم. از هر راهی که راحت‌ترید پیام بدهید.</p>
+    <div class="links">
+      <a class="lk" style="--col:#29b6f6" href="https://t.me/iDFaH" target="_blank" rel="noopener"><span>TG</span>تلگرام</a>
+      <a class="lk" style="--col:#ff8a00" href="https://eitaa.com/iDFahimi" target="_blank" rel="noopener"><span>EI</span>ایتا</a>
+      <a class="lk mail" href="mailto:fahimi.nml@gmail.com"><span>@</span>fahimi.nml@gmail.com</a>
+    </div>
+  </div>
+
+  <h2>پیام من</h2>
+  <div class="note">
+    <div class="emblem" aria-hidden="true">★</div>
+    <div class="txt" id="note">
+      <b>پیام من  </b>
+      <p> کسی ک بخواد تغییر کنه حتما میتونه </p>
+    </div>
+  </div>
+
+  <footer>© کلیه سایت متعلق به Fahimi میابشد و هرگونه تقلید از ان پیگرد قانونی دارد</footer>
 </div>
 <script>
-const slides=[...document.querySelectorAll('.slide')],dotsBox=document.getElementById('dots'),counter=document.getElementById('counter');
-let current=0,timer;
-slides.forEach((_,i)=>{const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.setAttribute('aria-label','رفتن به اسلاید '+(i+1));b.addEventListener('click',()=>show(i));dotsBox.appendChild(b)});
-const dots=[...dotsBox.children];
-function show(n){current=(n+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('active',i===current));dots.forEach((d,i)=>d.classList.toggle('active',i===current));counter.textContent=String(current+1).padStart(2,'0')+' / 08';resetTimer()}
-function resetTimer(){clearInterval(timer);timer=setInterval(()=>show(current+1),7000)}
-document.getElementById('prev').addEventListener('click',()=>show(current-1));
-document.getElementById('next').addEventListener('click',()=>show(current+1));
-document.addEventListener('visibilitychange',()=>{if(document.hidden)clearInterval(timer);else resetTimer()});
-resetTimer();
-</script></body></html>
+(function(){
+  const slider = document.getElementById("seoSlider");
+  if(!slider) return;
 
-==================== پایان فایل index.html ====================
+  const slides = slider.querySelectorAll(".seo-slide");
+  const dotsBox = document.getElementById("seoDots");
+  const count = document.getElementById("seoCount");
+  const progress = document.getElementById("seoProgress");
+  const prev = document.getElementById("seoPrev");
+  const next = document.getElementById("seoNext");
 
-==================== شروع فایل seo.html ====================
+  let current = 0;
+  let timer;
 
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ادامه آموزش سئو بر اساس هشت سؤال رایج مصاحبه استخدامی">
-<title>Mr Fahimi | ادامه آموزش سئو</title><style>
-:root{--c1:#00f0ff;--c2:#ff2e93;--c3:#b6ff3b;--bg:#07060f;--panel:#0f0d1f;--muted:#a9a6d6}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{font-family:Tahoma,"Segoe UI",sans-serif;background:var(--bg);color:#e9e7ff;line-height:1.9;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(600px 400px at 85% 0%,#ff2e9333,transparent),radial-gradient(600px 500px at 10% 100%,#00f0ff2b,transparent),linear-gradient(#00f0ff12 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,#00f0ff12 1px,transparent 1px) 0 0/44px 44px}
-body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;background:repeating-linear-gradient(115deg,transparent 0 38px,#ffffff08 38px 40px);animation:slidebg 6s linear infinite}
-@keyframes slidebg{to{background-position:200px 0}}
-.wrap{max-width:940px;margin:auto;padding:20px 18px 55px}
-header{position:sticky;top:8px;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 16px;background:#0f0d1fee;border:1px solid #00f0ff55;backdrop-filter:blur(12px);box-shadow:0 8px 30px #0008}
-.brand{font:bold 1rem monospace;color:var(--c1);letter-spacing:1px;text-decoration:none}
-nav{display:flex;gap:16px;flex-wrap:wrap}
-nav a{font-size:.82rem;color:#d9d5ff;text-decoration:none}
-nav a:hover{color:var(--c1)}
-.status{font-size:.72rem;color:var(--c3);white-space:nowrap}
-.status:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c3);box-shadow:0 0 9px var(--c3);margin-left:7px}
-.hero{margin:26px 0;padding:28px 24px;border:1px solid #00f0ff55;background:linear-gradient(135deg,#0f0d1fee,#1a0f2eee);clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,24px 100%,0 calc(100% - 24px));position:relative}
-.kicker{color:var(--c2);font:700 .72rem monospace;letter-spacing:2px}
-h1{font-size:clamp(2rem,7vw,3.3rem);line-height:1.35;color:white;text-shadow:2px 0 var(--c2),-2px 0 var(--c1);margin:8px 0}
-.role{color:var(--c1);font-weight:bold}
-.lead{color:var(--muted);max-width:700px;margin-top:8px}
-.btn{display:inline-block;margin-top:17px;padding:9px 20px;background:var(--c1);color:#07060f;text-decoration:none;font-weight:bold;box-shadow:0 0 18px #00f0ff55;transition:.2s}
-.btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
-.btn.alt{background:transparent;border:1px solid var(--c2);color:var(--c2);box-shadow:none;margin-right:8px}
-h2{font-size:1.2rem;color:var(--c1);margin:34px 0 14px}
-h2:before{content:"// ";color:var(--c2);font-family:monospace}
-.slider-shell{background:linear-gradient(135deg,#100e22,#171027);border:1px solid #00f0ff55;padding:18px;box-shadow:0 0 28px #00f0ff12}
-.slide{display:none;min-height:255px;padding:22px;background:#0b0a17;border:1px solid #ffffff18;position:relative}
-.slide.active{display:block;animation:appear .35s ease}
-@keyframes appear{from{opacity:.25;transform:translateX(10px)}to{opacity:1;transform:none}}
-.slide-num{font:700 .72rem monospace;color:var(--c2);letter-spacing:2px}
-.slide h3{font-size:1.25rem;color:#fff;margin:12px 0}
-.slide p{color:var(--muted);max-width:760px}
-.slide .hint{margin-top:14px;padding:10px 12px;border-right:3px solid var(--c3);background:#b6ff3b0c;color:#dce9b5;font-size:.88rem}
-.slider-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
-.arrows{display:flex;gap:8px}
-.arrow{border:1px solid var(--c1);background:transparent;color:var(--c1);padding:7px 15px;cursor:pointer;font:inherit}
-.arrow:hover{background:#00f0ff18}
-.dots{display:flex;gap:7px;justify-content:center;flex-wrap:wrap}
-.dot{width:9px;height:9px;border:0;border-radius:50%;background:#625d7b;cursor:pointer;padding:0}
-.dot.active{background:var(--c1);box-shadow:0 0 10px var(--c1)}
-.small{font-size:.8rem;color:#8985ad}
-.panel{background:var(--panel);border:1px solid #ffffff18;padding:18px;margin:14px 0}
-.panel h3{color:white;margin-bottom:7px}
-.panel p,.panel li{color:var(--muted)}
-.panel ul,.panel ol{padding-right:22px;margin-top:8px}
-.tag{display:inline-block;border:1px solid #b6ff3b66;color:var(--c3);padding:1px 10px;font-size:.75rem;margin:3px}
-.tip{border:1px dashed #b6ff3b88;background:#141326;padding:18px;margin-top:24px;color:var(--muted)}
-footer{text-align:center;color:#6d6a96;font:.75rem monospace;margin-top:42px}
-@media(max-width:600px){header{align-items:flex-start;flex-direction:column}nav{gap:12px}.slider-controls{flex-direction:column}.slide{min-height:300px}}
-</style></head>
-<body><div class="wrap">
-<header><a class="brand" href="index.html">MR FAHIMI</a><nav><a href="index.html">خانه</a><a href="index.html#seo-slider">اسلایدها</a><a href="#lessons">درس‌ها</a><a href="#interview-tip">نکته مصاحبه</a></nav><span class="status">SEO MODE</span></header>
-<section class="hero"><div class="kicker">PLAYER 01 / KNOWLEDGE BASE</div><h1>ادامه آموزش سئو</h1><p class="role">۸ موضوع کاربردی برای آشنایی و آمادگی مصاحبه</p><p class="lead">این صفحه ادامه اسلایدر صفحه اصلی است. توضیحات و مراحل زیر بر اساس PDF ارسالی «۸ سؤال رایج مصاحبه استخدامی سئو» تنظیم شده‌اند.</p><a class="btn" href="index.html#seo-slider">بازگشت به اسلایدر</a></section>
-<h2 id="lessons">راهنمای کامل هشت درس</h2>
-<article class="panel" id="lesson-1"><div class="kicker">SEO LESSON / 01</div><h3>سئو چیست و چه انواعی دارد؟</h3><p>سئو یعنی بهینه‌سازی سایت برای موتورهای جست‌وجو تا در نتایج ارگانیک (غیرتبلیغاتی) رتبه بهتری بگیرد. این کار می‌تواند ترافیک هدفمند جذب کند و در بلندمدت از تبلیغات ارزان‌تر باشد.</p><h3 style="color:var(--c1);margin-top:14px">مراحل و نکات کلیدی</h3><ol><li>داخلی (On-page): عنوان، توضیحات، تیترها، محتوا و لینک داخلی.</li><li>فنی (Technical): سرعت، سازگاری با موبایل، نقشه سایت و ایندکس.</li><li>خارجی (Off-page): بک‌لینک و اعتبار سایت.</li></ol><a class="btn alt" href="index.html#seo-slider">بازگشت به اسلایدها</a></article>
-<article class="panel" id="lesson-2"><div class="kicker">SEO LESSON / 02</div><h3>تحقیق کلمه کلیدی را چطور انجام می‌دهید؟</h3><p>از موضوع کسب‌وکار شروع کنید، ایده‌ها را جمع‌آوری کنید، حجم جست‌وجو و رقابت را بسنجید و کلمه‌ای را انتخاب کنید که با هدف کاربر هماهنگ باشد.</p><h3 style="color:var(--c1);margin-top:14px">مراحل و نکات کلیدی</h3><ol><li>موضوع و مخاطب را مشخص کنید.</li><li>از Google Suggest و جست‌وجوهای مرتبط ایده بگیرید.</li><li>با Keyword Planner یا Ahrefs حجم جست‌وجو و رقابت را بررسی کنید.</li><li>هدف کاربر (Search Intent) را بررسی کنید: اطلاعاتی، خرید یا مقایسه.</li><li>کلمات مرتبط با رقابت متوسط، به‌ویژه کلمات بلند (Long-tail)، را در نظر بگیرید.</li></ol><a class="btn alt" href="index.html#seo-slider">بازگشت به اسلایدها</a></article>
-<article class="panel" id="lesson-3"><div class="kicker">SEO LESSON / 03</div><h3>صفحه جدید ایندکس نمی‌شود؛ چه می‌کنید؟</h3><p>ابتدا وضعیت صفحه را در Search Console بررسی کنید؛ سپس مطمئن شوید مانعی جلوی ایندکس را نگرفته است و در پایان درخواست ایندکس بدهید.</p><h3 style="color:var(--c1);margin-top:14px">مراحل و نکات کلیدی</h3><ol><li>در URL Inspection وضعیت صفحه را ببینید.</li><li>موارد noindex و robots.txt را بررسی کنید. در وردپرس، تنظیمات Reading و گزینه Discourage search engines را هم بررسی کنید.</li><li>مطمئن شوید صفحه در نقشه سایت قرار دارد و لینک داخلی دریافت می‌کند.</li><li>کیفیت و یکتایی محتوا را بررسی کنید.</li><li>در صورت مناسب‌بودن شرایط، Request Indexing را بزنید و چند روز بعد دوباره بررسی کنید.</li></ol><a class="btn alt" href="index.html#seo-slider">بازگشت به اسلایدها</a></article>
-<article class="panel" id="lesson-4"><div class="kicker">SEO LESSON / 04</div><h3>ترافیک سایت افت کرده است؛ چطور بررسی می‌کنید؟</h3><p>ابتدا زمان و محل افت را پیدا کنید؛ سپس علت فنی یا محتوایی را بررسی کرده و مشکلات را به ترتیب اولویت برطرف کنید.</p><h3 style="color:var(--c1);margin-top:14px">مراحل و نکات کلیدی</h3><ol><li>در Search Console و Analytics زمان افت و صفحات یا کلمات درگیر را پیدا کنید.</li><li>بررسی کنید آیا تغییری در سایت یا به‌روزرسانی الگوریتم گوگل رخ داده است.</li><li>خطاهای فنی مانند ایندکس، سرعت و لینک شکسته را بررسی کنید.</li><li>محتوا و رتبه رقبا را مقایسه کنید.</li><li>مشکلات را رفع کنید و پس از چند هفته نتیجه را دوباره بسنجید.</li></ol><a class="btn alt" href="index.html#seo-slider">بازگشت به اسلایدها</a></article>
-<article class="panel" id="lesson-5"><div class="kicker">SEO LESSON / 05</div><h3>بک‌لینک چیست و چرا مهم است؟</h3><p>بک‌لینک لینکی از یک سایت دیگر به سایت شماست. می‌توان آن را مانند رأی اعتماد در نظر گرفت؛ اما کیفیت و ارتب
+  slides.forEach((slide,index)=>{
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "seo-dot";
+    dot.setAttribute("aria-label","رفتن به اسلاید "+(index+1));
+    dot.addEventListener("click",()=>showSlide(index));
+    dotsBox.appendChild(dot);
+  });
+
+  const dots = dotsBox.querySelectorAll(".seo-dot");
+
+  function showSlide(index){
+    current = (index + slides.length) % slides.length;
+
+    slides.forEach((slide,i)=>{
+      slide.classList.toggle("active",i===current);
+    });
+
+    dots.forEach((dot,i)=>{
+      dot.classList.toggle("active",i===current);
+    });
+
+    count.textContent =
+      String(current+1).padStart(2,"0") + " / 08";
+
+    progress.style.width =
+      ((current+1)/slides.length*100)+"%";
+
+    restartTimer();
+  }
+
+  function restartTimer(){
+    clearInterval(timer);
+    timer = setInterval(()=>showSlide(current+1),7000);
+  }
+
+  prev.addEventListener("click",()=>showSlide(current-1));
+  next.addEventListener("click",()=>showSlide(current+1));
+
+  slider.addEventListener("mouseenter",()=>clearInterval(timer));
+  slider.addEventListener("mouseleave",restartTimer);
+
+  showSlide(0);
+})();
+</script>
+</body>
+</html>
