@@ -5,112 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mr Fahimi | نمونه کارهام  </title>
 <meta name="description"  بتوشه  ">
-/* SEO SLIDER - افزوده شده بدون تغییر استایل‌های قبلی */
-.seo-slider{
-  margin:35px 0;
-  padding:22px;
-  background:linear-gradient(135deg,#0f0d1f,#1a0f2e);
-  border:1px solid #00f0ff66;
-  box-shadow:0 0 22px #00f0ff18;
-  position:relative;
-  overflow:hidden;
-}
-.seo-slider .seo-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  margin-bottom:18px;
-  color:var(--c1);
-  font-size:.8rem;
-}
-.seo-slider .seo-count{
-  color:var(--c3);
-  font-family:monospace;
-}
-.seo-slider .seo-slide{
-  display:none;
-  min-height:245px;
-  animation:seoFade .4s ease;
-}
-.seo-slider .seo-slide.active{display:block}
-@keyframes seoFade{
-  from{opacity:0;transform:translateY(8px)}
-  to{opacity:1;transform:translateY(0)}
-}
-.seo-slider .seo-slide h3{
-  color:var(--c2);
-  font-size:1.15rem;
-  margin-bottom:12px;
-}
-.seo-slider .seo-slide p{
-  color:#e9e7ff;
-  font-size:.92rem;
-  margin-bottom:10px;
-}
-.seo-slider .seo-slide ul{
-  padding-right:22px;
-  color:#a9a6d6;
-  font-size:.86rem;
-}
-.seo-slider .seo-slide li{margin:5px 0}
-.seo-slider .seo-controls{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  margin-top:18px;
-}
-.seo-slider .seo-btn{
-  cursor:pointer;
-  border:1px solid var(--c1);
-  background:transparent;
-  color:var(--c1);
-  padding:7px 17px;
-  font-family:Tahoma,sans-serif;
-  font-weight:bold;
-  transition:.2s;
-}
-.seo-slider .seo-btn:hover{
-  background:var(--c1);
-  color:var(--bg);
-  box-shadow:0 0 14px var(--c1);
-}
-.seo-slider .seo-dots{
-  display:flex;
-  justify-content:center;
-  gap:7px;
-}
-.seo-slider .seo-dot{
-  width:9px;
-  height:9px;
-  padding:0;
-  border:0;
-  border-radius:50%;
-  background:#66617f;
-  cursor:pointer;
-}
-.seo-slider .seo-dot.active{
-  background:var(--c3);
-  box-shadow:0 0 10px var(--c3);
-}
-.seo-slider .seo-progress{
-  height:3px;
-  background:#ffffff15;
-  margin-top:15px;
-}
-.seo-slider .seo-progress i{
-  display:block;
-  height:100%;
-  width:12.5%;
-  background:var(--c1);
-  transition:width .3s;
-}
-@media(max-width:520px){
-  .seo-slider{padding:16px}
-  .seo-slider .seo-slide{min-height:300px}
-  .seo-slider .seo-controls{flex-wrap:wrap}
-}
 <style>
 :root{--c1:#00f0ff;--c2:#ff2e93;--c3:#b6ff3b;--bg:#07060f;--panel:#0f0d1f}
 *{box-sizing:border-box;margin:0}
@@ -201,113 +95,6 @@ footer{text-align:center;color:#6d6a96;font:.75rem monospace;margin-top:50px}
   </div>
 
   <h2>آمار بازیکن</h2>
-  <!-- SEO SLIDER -->
-  <h2>آموزش سئو | ۸ سؤال مهم مصاحبه</h2>
-
-  <section class="seo-slider" id="seoSlider">
-    <div class="seo-top">
-      <span>SEO TRAINING / QUEST</span>
-      <span class="seo-count" id="seoCount">01 / 08</span>
-    </div>
-
-    <div class="seo-slide active">
-      <h3>۱. سئو چیست و چه انواعی دارد؟</h3>
-      <p>سئو یعنی بهینه‌سازی سایت برای موتورهای جستجو تا در نتایج طبیعی رتبه بهتری بگیرد و بازدیدکننده هدفمند جذب کند.</p>
-      <ul>
-        <li>سئوی داخلی: عنوان، توضیحات، تیترها و محتوا</li>
-        <li>سئوی فنی: سرعت، نسخه موبایل و ایندکس</li>
-        <li>سئوی خارجی: بک‌لینک و اعتبار سایت</li>
-      </ul>
-    </div>
-
-    <div class="seo-slide">
-      <h3>۲. تحقیق کلمه کلیدی چگونه انجام می‌شود؟</h3>
-      <p>ابتدا موضوع کسب‌وکار و مخاطب را مشخص می‌کنم؛ سپس حجم جستجو، رقابت و هدف کاربر را بررسی می‌کنم.</p>
-      <ul>
-        <li>استفاده از Google Suggest و جستجوهای مرتبط</li>
-        <li>بررسی با Keyword Planner یا Ahrefs</li>
-        <li>تشخیص هدف جستجو: اطلاعاتی، خرید یا مقایسه</li>
-        <li>انتخاب کلمات مرتبط و Long-tail</li>
-      </ul>
-    </div>
-
-    <div class="seo-slide">
-      <h3>۳. چرا یک صفحه ایندکس نمی‌شود؟</h3>
-      <p>ابتدا وضعیت صفحه را در Google Search Console بررسی می‌کنم و بعد موانع ایندکس را پیدا می‌کنم.</p>
-      <ul>
-        <li>بررسی URL Inspection</li>
-        <li>بررسی noindex و فایل robots.txt</li>
-        <li>بررسی نقشه سایت و لینک‌های داخلی</li>
-        <li>بررسی کیفیت و یکتایی محتوا</li>
-        <li>درخواست Request Indexing و صبر برای بررسی مجدد</li>
-      </ul>
-    </div>
-
-    <div class="seo-slide">
-      <h3>۴. اگر ترافیک سایت افت کند چه می‌کنید؟</h3>
-      <p>ابتدا زمان و صفحات درگیر را پیدا می‌کنم؛ سپس علت فنی یا محتوایی افت را بررسی می‌کنم.</p>
-      <ul>
-        <li>بررسی Search Console و Analytics</li>
-        <li>بررسی تغییرات سایت و آپدیت الگوریتم گوگل</li>
-        <li>بررسی ایندکس، سرعت و لینک‌های شکسته</li>
-        <li>مقایسه محتوا و رتبه رقبا</li>
-        <li>رفع مشکلات و ارزیابی دوباره نتیجه</li>
-      </ul>
-    </div>
-
-    <div class="seo-slide">
-      <h3>۵. بک‌لینک چیست؟</h3>
-      <p>بک‌لینک لینکی است که از یک سایت دیگر به سایت ما داده می‌شود. اعتبار و ارتباط سایت لینک‌دهنده از تعداد لینک‌ها مهم‌تر است.</p>
-      <ul>
-        <li>دریافت لینک از سایت معتبر و مرتبط</li>
-        <li>تولید محتوای ارزشمند</li>
-        <li>مهمان‌نویسی و معرفی در رسانه‌های مرتبط</li>
-        <li>پرهیز از لینک‌های انبوه و بی‌کیفیت</li>
-      </ul>
-    </div>
-
-    <div class="seo-slide">
-      <h3>۶. اگر سایت کند باشد چه می‌کنید؟</h3>
-      <p>ابتدا با PageSpeed Insights مشکل سرعت را بررسی می‌کنم و بعد موارد قابل بهبود را اصلاح می‌کنم.</p>
-      <ul>
-        <li>فشرده‌سازی تصاویر و استفاده از WebP</li>
-        <li>استفاده از Smush یا ShortPixel</li>
-        <li>فعال‌سازی کش با LiteSpeed Cache یا WP Rocket</li>
-        <li>حذف افزونه‌ها و قالب‌های اضافی</li>
-        <li>بررسی هاست و CDN</li>
-      </ul>
-    </div>
-
-    <div class="seo-slide">
-      <h3>۷. ریسپانسیو بودن چه تأثیری بر سئو دارد؟</h3>
-      <p>ریسپانسیو یعنی سایت با اندازه صفحه نمایش موبایل و کامپیوتر هماهنگ شود. گوگل هم از Mobile-First Indexing استفاده می‌کند.</p>
-      <ul>
-        <li>طراحی با CSS، Media Query، Flexbox و Grid</li>
-        <li>بهبود تجربه کاربری در موبایل</li>
-        <li>بررسی مشکلات موبایل در Search Console</li>
-      </ul>
-    </div>
-
-    <div class="seo-slide">
-      <h3>۸. ابزارهای مهم سئو کدام‌اند؟</h3>
-      <p>هر ابزار برای بررسی بخشی از وضعیت سایت استفاده می‌شود:</p>
-      <ul>
-        <li>Google Search Console: کلیک، رتبه و ایندکس</li>
-        <li>Google Analytics: بازدیدکننده و رفتار کاربران</li>
-        <li>Ahrefs و Semrush: کلمه کلیدی و بک‌لینک</li>
-        <li>Screaming Frog: خطاهای فنی و لینک شکسته</li>
-        <li>PageSpeed Insights: سرعت سایت</li>
-      </ul>
-    </div>
-
-    <div class="seo-progress"><i id="seoProgress"></i></div>
-
-    <div class="seo-controls">
-      <button class="seo-btn" type="button" id="seoPrev">قبلی</button>
-      <div class="seo-dots" id="seoDots"></div>
-      <button class="seo-btn" type="button" id="seoNext">بعدی</button>
-    </div>
-  </section>
   <div class="stats">
     <div class="stat"><div><span>موبایل و کامپیوتر  </span><span>90%</span></div><div class="bar"><i style="width:90%"></i></div></div>
     <div class="stat"><div><span>طراحی سایت </span><span>75%</span></div><div class="bar"><i style="width:75%"></i></div></div>
@@ -316,9 +103,10 @@ footer{text-align:center;color:#6d6a96;font:.75rem monospace;margin-top:50px}
 
   <h2>ماموریت‌ها</h2>
   <div class="cards">
-    <div class="q"><small>QUEST 01</small><b>پروژه‌ی اول</b><p> هنو نگرفتم بگیرم میزارم اینجا صدردصد .</p></div>
-    <div class="q"><small>QUEST 02</small><b>پروژه‌ی دوم</b><p>میگم هنو نگرفتم بگیرم میزارم  .</p></div>
-    <div class="q"><small>QUEST 03</small><b>پروژه‌ی سوم</b><p>داش دنبال چیی میگم نگرفتم  .</p></div>
+    <div class="q"><small>QUEST 01</small><b>سئو چیست ؟</b><p> هنو نگرفتم بگیرم میزارم اینجا صدردصد .</p></div>
+    <div class="q"><small>QUEST 02</small><b>ایندکس چیست؟</b><p>میگم هنو نگرفتم بگیرم میزارم  .</p></div>
+    <div class="q"><small>QUEST 03</small><b>اگر سرعت سایت کند شد چ کنیم ؟</b><p>»اول با PageSpeed Insights مشکل را پیدا میکنم، بعد تصاویر را سبک
+میکنم، کش را فعال میکنم و افزونههای اضافی را حذف میکنم  .</p></div>
   </div>
 
   <h2>علاقه‌مندی‌ها</h2>
@@ -345,65 +133,5 @@ footer{text-align:center;color:#6d6a96;font:.75rem monospace;margin-top:50px}
 
   <footer>© کلیه سایت متعلق به Fahimi میابشد و هرگونه تقلید از ان پیگرد قانونی دارد</footer>
 </div>
-<script>
-(function(){
-  const slider = document.getElementById("seoSlider");
-  if(!slider) return;
-
-  const slides = slider.querySelectorAll(".seo-slide");
-  const dotsBox = document.getElementById("seoDots");
-  const count = document.getElementById("seoCount");
-  const progress = document.getElementById("seoProgress");
-  const prev = document.getElementById("seoPrev");
-  const next = document.getElementById("seoNext");
-
-  let current = 0;
-  let timer;
-
-  slides.forEach((slide,index)=>{
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.className = "seo-dot";
-    dot.setAttribute("aria-label","رفتن به اسلاید "+(index+1));
-    dot.addEventListener("click",()=>showSlide(index));
-    dotsBox.appendChild(dot);
-  });
-
-  const dots = dotsBox.querySelectorAll(".seo-dot");
-
-  function showSlide(index){
-    current = (index + slides.length) % slides.length;
-
-    slides.forEach((slide,i)=>{
-      slide.classList.toggle("active",i===current);
-    });
-
-    dots.forEach((dot,i)=>{
-      dot.classList.toggle("active",i===current);
-    });
-
-    count.textContent =
-      String(current+1).padStart(2,"0") + " / 08";
-
-    progress.style.width =
-      ((current+1)/slides.length*100)+"%";
-
-    restartTimer();
-  }
-
-  function restartTimer(){
-    clearInterval(timer);
-    timer = setInterval(()=>showSlide(current+1),7000);
-  }
-
-  prev.addEventListener("click",()=>showSlide(current-1));
-  next.addEventListener("click",()=>showSlide(current+1));
-
-  slider.addEventListener("mouseenter",()=>clearInterval(timer));
-  slider.addEventListener("mouseleave",restartTimer);
-
-  showSlide(0);
-})();
-</script>
 </body>
 </html>
